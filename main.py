@@ -1,5 +1,5 @@
 import gspread
-#import pillow
+import PIL
 
 def main():
     print("Hi")
