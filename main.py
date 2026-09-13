@@ -4,11 +4,12 @@ import PIL
 from PIL import Image, ImageGrab, ImageDraw, ImageText, ImageFont
 
 import random
+import textwrap
 
 CARD_WIDTH = 250
 CARD_HEIGHT = 350
-SHEET_CARD_HEIGHT = 4
-SHEET_CARD_WIDTH = 5
+SHEET_CARD_HEIGHT = 8
+SHEET_CARD_WIDTH = 10
 SHEET_SIZE = SHEET_CARD_HEIGHT * SHEET_CARD_WIDTH
 SHEET_HEIGHT = CARD_HEIGHT * SHEET_CARD_HEIGHT
 SHEET_WIDTH = CARD_WIDTH * SHEET_CARD_WIDTH
@@ -17,9 +18,15 @@ reader = gspread.api_key("AIzaSyDOsvY1riiBGMfHEN4m0oLA2V4TENxn2OU")
 sheet = reader.open_by_key("1RyVuXuTbjReXnPB0BYGq-aMEtmI_Z3HK2iEkngKHFN4")
 filename = "card_data.csv"
 
+huge_font = ImageFont.truetype("times-new-roman.ttf", 28)
+big_font = ImageFont.truetype("times-new-roman.ttf", 22)
+medium_font = ImageFont.truetype("times-new-roman.ttf", 18)
+small_font = ImageFont.truetype("times-new-roman.ttf", 16)
 
 def find_card(name):
 
+
+    
     with open(filename, "r") as f:
 
         data = csv.DictReader(f, delimiter="|")
@@ -30,7 +37,44 @@ def find_card(name):
 
                 return row
 
-    return None 
+    raise Exception("Card \"" + name + "\"does not exist.")
+
+def gen_from_decklist(decklist):
+
+    main_deck = []
+    extra_deck = []
+
+    with open("decklist_here.txt") as f:
+        lines = f.readlines()
+
+        if lines[0].strip() == "Main Deck:":
+            print("Main Deck found.")
+        else:
+            raise Exception("Main Deck not found! Please check  your formatting against the README")
+
+        extra_index = 0
+
+        for index in range(len(lines)):
+            if lines[index].strip() == "Extra Deck:":
+                extra_index = index
+                print("Extra Deck found.")
+                break
+        if extra_index == 0:
+            raise Exception("Extra Deck not found! Please check  your formatting against the README")
+
+
+        for index in range(1, extra_index - 1):
+            main_deck.append(lines[index].strip())
+
+        for index in range(extra_index + 1, len(lines)):
+            extra_deck.append(lines[index].strip())
+        
+        generate_sheet(main_deck, "main_deck.jpg")
+        print("main_deck.jpg made.")
+        generate_sheet(extra_deck, "extra_deck.jpg")
+        print("extra_deck.jpg made.")
+
+    return
 
 def generate_card_list(length, index):
 
@@ -61,15 +105,28 @@ def generate_card_list(length, index):
 def generate_card(card_name):
 
     # I should make this color depending on what it expends for maybe
-
-
-    new_card = PIL.Image.new("RGB", (CARD_WIDTH, CARD_HEIGHT), (255, 255, 255))
-    #(random.randint(100, 255), random.randint(100, 255), 255)
-    big_font = ImageFont.truetype("times-new-roman.ttf", 22)
-    medium_font = ImageFont.truetype("times-new-roman.ttf", 18)
-
-
     row_data = find_card(card_name)
+
+    color = (245, 245, 245)
+
+
+    if row_data["Expend Value"].__contains__("R"):
+        color = (255, 200, 200)
+    if row_data["Expend Value"].__contains__("W"):
+        color = (255, 255, 240)
+    if row_data["Expend Value"].__contains__("B"):
+        color = (180, 150, 220)
+    if row_data["Expend Value"].__contains__("G"):
+        color = (200, 250, 200)
+    if row_data["Expend Value"].__contains__("U"):
+        color = (170, 200, 255)
+    
+
+    new_card = PIL.Image.new("RGB", (CARD_WIDTH, CARD_HEIGHT), color)
+    #(random.randint(100, 255), random.randint(100, 255), 255)
+    
+
+    
 
     drawer = ImageDraw.Draw(new_card)
 
@@ -87,19 +144,26 @@ def generate_card(card_name):
     drawer.text((CARD_WIDTH / 2, CARD_HEIGHT * .5), type_text, "BLACK", anchor="ms", align="center")
 
     # Rules Text
-    rules_text = ImageText.Text(row_data['Oracle Text'], medium_font, "RGB", 4, "ltr")
-    
-    #print("This is before the rules text gets wrapped")
-    #print(row_data["Oracle Text"])
-    wrapped_rules = rules_text.wrap(CARD_WIDTH * .8, CARD_HEIGHT * .4)
-    if wrapped_rules:
-        print("This is " + row_data["Name"])
-        print("These are the rules text after they are wrapped.")
-        print(wrapped_rules.text)
-    #drawer.multiline_text((CARD_WIDTH / 2, CARD_HEIGHT * .55), wrapped_rules, "BLACK", anchor="ms", align="center")
+    raw_rules_text = row_data['Oracle Text'].strip()
+
+    if len(raw_rules_text) > 50:
+
+        rules_text_list = textwrap.wrap(raw_rules_text, 30)
+        wrapped_rules_text = "\n".join(rules_text_list)
+        
+        rules_text = ImageText.Text(wrapped_rules_text, small_font, "RGB", 4, "ltr")
+        drawer.multiline_text((CARD_WIDTH / 2, CARD_HEIGHT * .57), rules_text, "BLACK", anchor="ms", align="center")
+
+    else:
+
+        rules_text_list = textwrap.wrap(raw_rules_text, 20)
+        wrapped_rules_text = "\n".join(rules_text_list)
+        
+        rules_text = ImageText.Text(wrapped_rules_text, medium_font, "RGB", 4, "ltr")
+        drawer.multiline_text((CARD_WIDTH / 2, CARD_HEIGHT * .57), rules_text, "BLACK", anchor="ms", align="center")
 
     # Expend Value
-    expend_text = ImageText.Text(row_data['Expend Value'], big_font, "RGB", 4, "ltr")
+    expend_text = ImageText.Text(row_data['Expend Value'], huge_font, "RGB", 4, "ltr")
     drawer.text((CARD_WIDTH / 2, CARD_HEIGHT * .95), expend_text, "BLACK", anchor="ms", align="center")
 
     return new_card
@@ -110,7 +174,7 @@ def set_up():
         writer = csv.writer(f, quoting=csv.QUOTE_ALL, delimiter="|")
         writer.writerows(sheet.sheet1.get_all_values())   
         
-def generate_sheet(list):
+def generate_sheet(list, name):
 
     card_array = []
 
@@ -129,31 +193,13 @@ def generate_sheet(list):
                 array_counter += 1
 
 
-    new_sheet.save("new_sheet.jpg")
+    new_sheet.save(name)
 
 def main(): 
 
     #set_up()
 
-
-    #example_sheet = ["Paranoid Puppy", "Paranoid Puppy", "Lifewield"]
-
-
-    new_list = generate_card_list(30, 0)
-
-    generate_sheet(new_list)
-    
-
-    # medium_font = ImageFont.truetype("times-new-roman.ttf", 18)
-
-    # img = Image.new('RGB', (128, 48), color='black')
-    # img.textsize = 20
-    # fit_text(img, 'LongerTextGoesHere', (255,255,0), medium_font)
-    # img.show()
-
-
-
-    #print(find_card("Paranoid Puppy"))
+    gen_from_decklist("decklist_here.txt")
 
     print("Complete.")
 
