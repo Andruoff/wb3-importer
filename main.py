@@ -37,36 +37,62 @@ def find_card(name):
 
     raise Exception("Card \"" + name + "\"does not exist.")
 
+def decklist_checker(decklist):
+
+    print("Have you pasted your decklist into \"decklist_here\" properly? (Y/N)")
+    answer = input()
+    match answer:
+        case "N", "n", "no", "No":
+            print("Please do that before running the program thank you.")
+            quit()
+        case _:
+            pass
+
+    with open(decklist) as f:
+            lines = f.readlines()
+    
+            if lines[0].strip() == "PASTE HERE":
+                print("You forgot to paste your decklist, or pasted it to the wrong spot! Please start over.")
+                exit()
+    
+            if lines[0].strip() == "Main Deck:":
+                print("You forgot the deck name! Please check  your formatting against example_decklist.txt. Please start over.")
+                decklist_checker(decklist)
+    
+            deck_name = lines[0].strip()
+    
+            if lines[1].strip() == "Main Deck:":
+                print("Main Deck found.")
+            else:
+                print("Main Deck not found! Please check  your formatting against example_decklist.txt. Please start over.")
+                decklist_checker(decklist)
+    
+            extra_index = 0
+    
+            for index in range(len(lines)):
+                if lines[index].strip() == "Extra Deck:":
+                    extra_index = index
+                    print("Extra Deck found.")
+                    return extra_index
+            if extra_index == 0:
+                print("Extra Deck not found! Please check  your formatting against example_decklist.txt. Please start over.")
+                decklist_checker(decklist)
+
+    pass
+
 def gen_from_decklist(decklist):
 
     main_deck = []
     extra_deck = []
 
+    
+    extra_index = decklist_checker(decklist)
+
     with open(decklist) as f:
         lines = f.readlines()
 
-        if lines[0].strip() == "PASTE HERE":
-            raise Exception("You forgot to paste your decklist, or pasted it to the wrong spot!")
-
-        if lines[0].strip() == "Main Deck:":
-            raise Exception("You forgot the deck name! Please check  your formatting against example_decklist.txt")
 
         deck_name = lines[0].strip()
-
-        if lines[1].strip() == "Main Deck:":
-            print("Main Deck found.")
-        else:
-            raise Exception("Main Deck not found! Please check  your formatting against example_decklist.txt")
-
-        extra_index = 0
-
-        for index in range(len(lines)):
-            if lines[index].strip() == "Extra Deck:":
-                extra_index = index
-                print("Extra Deck found.")
-                break
-        if extra_index == 0:
-            raise Exception("Extra Deck not found! Please check  your formatting against example_decklist.txt")
 
 
         for index in range(2, extra_index - 1):
@@ -74,10 +100,10 @@ def gen_from_decklist(decklist):
             count = int(lines[index][0])
 
             unfinished_name = lines[index].strip()
-            print(unfinished_name)
+            #print(unfinished_name)
             unfinished_name = unfinished_name.replace(unfinished_name[0], "", 1)
             name = unfinished_name.replace(unfinished_name[0], "", 1)
-            print(name)
+            #print(name)
             for i in range(count):
 
                 main_deck.append(name)
@@ -87,19 +113,19 @@ def gen_from_decklist(decklist):
             count = int(lines[index][0])
             
             unfinished_name = lines[index].strip()
-            print(unfinished_name)
+            #print(unfinished_name)
             unfinished_name = unfinished_name.replace(unfinished_name[0], "", 1)
             name = unfinished_name.replace(unfinished_name[0], "", 1)
-            print(name)
+            #print(name)
 
             for i in range(count):
 
                 extra_deck.append(name)
         
-        generate_sheet(main_deck, deck_name + "_main.jpg")
-        print("main_deck.jpg made.")
-        generate_sheet(extra_deck, deck_name + "_extra.jpg")
-        print("extra_deck.jpg made.")
+    generate_sheet(main_deck, deck_name + "_main.jpg")
+    print("main_deck.jpg made.")
+    generate_sheet(extra_deck, deck_name + "_extra.jpg")
+    print("extra_deck.jpg made.")
 
     return
 
@@ -197,9 +223,32 @@ def generate_card(card_name):
 
 def set_up():
 
-    with open(filename, 'w') as f:
-        writer = csv.writer(f, quoting=csv.QUOTE_ALL, delimiter="|")
-        writer.writerows(sheet.sheet1.get_all_values())   
+    print("Hello and welcome to the deck generator!")
+
+    def reimport():
+        print("Would you like to update the card database? (Y/N)")
+        answer = input()
+        print("Answer: \"" + answer + "\"")
+        match answer:
+            case "Y" | "y" | "Yes" | "yes":
+                print("Reading sheet...")
+                with open(filename, 'w') as f:
+                    writer = csv.writer(f, quoting=csv.QUOTE_ALL, delimiter="|")
+                    writer.writerows(sheet.sheet1.get_all_values())  
+                print("Sheet updated!")
+            case "N" | "n" | "No" | "no":
+                print("Update declined.")
+                return
+            case _:
+                print("Please enter Y or N!")
+                reimport()
+
+    reimport()
+
+
+    # with open(filename, 'w') as f:
+    #     writer = csv.writer(f, quoting=csv.QUOTE_ALL, delimiter="|")
+    #     writer.writerows(sheet.sheet1.get_all_values())   
         
 def generate_sheet(list, name):
 
@@ -226,9 +275,9 @@ def main():
 
     set_up()
 
-    gen_from_decklist("example_decklist.txt")
+    gen_from_decklist("decklist_here.txt")
 
-    print("Complete.")
+    print("Complete. Program finishing.")
 
 if __name__ == '__main__':
     main()
