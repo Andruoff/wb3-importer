@@ -24,8 +24,6 @@ medium_font = ImageFont.truetype("times-new-roman.ttf", 18)
 small_font = ImageFont.truetype("times-new-roman.ttf", 16)
 
 def find_card(name):
-
-
     
     with open(filename, "r") as f:
 
@@ -44,13 +42,21 @@ def gen_from_decklist(decklist):
     main_deck = []
     extra_deck = []
 
-    with open("decklist_here.txt") as f:
+    with open(decklist) as f:
         lines = f.readlines()
 
+        if lines[0].strip() == "PASTE HERE":
+            raise Exception("You forgot to paste your decklist, or pasted it to the wrong spot!")
+
         if lines[0].strip() == "Main Deck:":
+            raise Exception("You forgot the deck name! Please check  your formatting against example_decklist.txt")
+
+        deck_name = lines[0].strip()
+
+        if lines[1].strip() == "Main Deck:":
             print("Main Deck found.")
         else:
-            raise Exception("Main Deck not found! Please check  your formatting against the README")
+            raise Exception("Main Deck not found! Please check  your formatting against example_decklist.txt")
 
         extra_index = 0
 
@@ -60,18 +66,39 @@ def gen_from_decklist(decklist):
                 print("Extra Deck found.")
                 break
         if extra_index == 0:
-            raise Exception("Extra Deck not found! Please check  your formatting against the README")
+            raise Exception("Extra Deck not found! Please check  your formatting against example_decklist.txt")
 
 
-        for index in range(1, extra_index - 1):
-            main_deck.append(lines[index].strip())
+        for index in range(2, extra_index - 1):
+            
+            count = int(lines[index][0])
+
+            unfinished_name = lines[index].strip()
+            print(unfinished_name)
+            unfinished_name = unfinished_name.replace(unfinished_name[0], "", 1)
+            name = unfinished_name.replace(unfinished_name[0], "", 1)
+            print(name)
+            for i in range(count):
+
+                main_deck.append(name)
 
         for index in range(extra_index + 1, len(lines)):
-            extra_deck.append(lines[index].strip())
+
+            count = int(lines[index][0])
+            
+            unfinished_name = lines[index].strip()
+            print(unfinished_name)
+            unfinished_name = unfinished_name.replace(unfinished_name[0], "", 1)
+            name = unfinished_name.replace(unfinished_name[0], "", 1)
+            print(name)
+
+            for i in range(count):
+
+                extra_deck.append(name)
         
-        generate_sheet(main_deck, "main_deck.jpg")
+        generate_sheet(main_deck, deck_name + "_main.jpg")
         print("main_deck.jpg made.")
-        generate_sheet(extra_deck, "extra_deck.jpg")
+        generate_sheet(extra_deck, deck_name + "_extra.jpg")
         print("extra_deck.jpg made.")
 
     return
@@ -197,9 +224,9 @@ def generate_sheet(list, name):
 
 def main(): 
 
-    #set_up()
+    set_up()
 
-    gen_from_decklist("decklist_here.txt")
+    gen_from_decklist("example_decklist.txt")
 
     print("Complete.")
 

@@ -1,258 +1,130 @@
-"Name"|"Color"|"Mana Cost"|"MV"|"Oracle Text"|"Type"|"Subtype"|"Expend Value"|"ATK"|""|""|""|""
-
-"Paranoid Puppy"|"White"|"W"|"1"|"When you discard a card, you may send that card to the bottom of your deck instead."|"Summon"|"Familar"|"W"|"0"|""|"0"|"0"|"1"
-
-"Axolotl Friend"|"White"|"1W"|"2"|"At the start of your end step, gain 1 life for each card in your reserve."|"Summon"|"Familiar"|"W"|"0"|""|"1"|"1"|"2"
-
-"Recover"|"White"|"1W"|"2"|"If you lost life this turn, gain 5 life "|"Quick Spell"|"Trap"|"W"|""|""|"1"|"1"|"2"
-
-"Grand Aegis"|"White"|"1WWWW"|"5"|"Requirements: Control two constructs. You take half damage, rounded up."|"Ritual Summon"|"Construct"|"W"|"0"|""|"1"|"1"|"5"
-
-"Wreen Shock"|"White"|"W"|"1"|"Deal 2 damage to target player."|"Quick Spell"|"Life"|"C"|""|""|"0"|"0"|"1"
-
-"Mend Self"|"White"|"1WW"|"3"|"If you have 7 or less life, gain 7 life, otherwise gain 4 life "|"Quick Spell"|"Life"|"W"|""|""|"1"|"1"|"3"
-
-"Soul Explosion"|"White"|"2WWWW"|"6"|"Deal 8 damage to target player and 4 damage to yourself"|"Spell"|"Life"|"W"|""|""|"2"|"1"|"5"
-
-"Watchful Eye"|"White"|"W"|"1"|"The next time target permanent would be destroyed, it isn't instead."|"Quick Spell"|"Eye"|"C"|""|""|"0"|"0"|"1"
-
-"Emergency Stitches"|"White"|"1WW"|"3"|"If you have 7 or less life, gain 7 life, otherwise gain 4 life"|"Quick Spell"|"Life"|"W"|""|""|"1"|"1"|"3"
-
-"Lifewield"|"White"|"1WW"|"3"|"Deal 5 damage to target opponent and deal 3 damage to yourself. "|"Quick Spell"|"Life"|"W"|""|""|"1"|"1"|"3"
-
-"Overpower"|"White"|"WWWWWW"|"6"|"Pay up to half your current hp to deal damage to an opponent"|"Spell"|"Life"|"W"|""|""|"0"|"0"|"6"
-
-"Mutual Assurance"|"White"|"2W"|"3"|"Deal 4 damage to each player"|"Spell"|"Life"|"W"|""|""|"2"|"1"|"2"
-
-"Exertion"|"White"|"1WW"|"3"|"Deal 2 damage to yourself, choose one: -destroy target permanent -deal 3 damage to target player"|"Spell"|""|"W"|""|""|"1"|"1"|"3"
-
-"Reset"|"White"|"WW"|""|"Gain life equal to the damage that was dealt to you this turn."|"Spell"|"Life"|"W"|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
-
-""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
-
-"Mutual Ascension"|"Blue"|"3UUUUU"|"8"|"Each player may cast their first spell on each of their turns without paying its mana cost"|"Spell"|"Arena"|"B"|""|""|"3"|"1"|"6"
-
-"Grand Spirit Summoning"|"Blue"|"UUUUU"|"5"|"Aetherize cards from your library until you reveal a Geist, then put it into play. "|"Spell"|"Ethereal"|"U"|""|""|"0"|"0"|"5"
-
-"Annoying Poltergeist"|"Blue"|"1UU"|"3"|"At the end of your turn, any number of target players aetherizes the top 6 cards of their library "|"Summon"|"Familiar Geist"|"U"|"0"|""|"1"|"1"|"3"
-
-"Annoying Mage's Friend"|"Blue"|"2U"|"3"|"You may keep up to one additional card when you discard."|"Summon"|""|"U"|"0"|""|"2"|"1"|"2"
-
-"Neurotoxin"|"Blue"|"1UU"|"3"|"After each player draws for turn, they exile a card from their hand and the top 3 cards of their library"|"Construct"|"Neurotoxin"|"U"|""|""|"1"|"1"|"3"
-
-"Mind's Triumph"|"Blue"|"1UUU"|"4"|"Requirements: Have ten or more cards in hand. Target Opponent exiles all but the top ten cards of their library."|"Ritual Spell"|"Mental"|"U"|""|""|"1"|"1"|"4"
-
-"Increasing Returns"|"Blue"|"1U"|"2"|"You may run up to 5 of this card in your deck Draw a card, then draw a card for each Increasing Returns in your storage and aether."|"Spell"|""|"C"|""|""|"1"|"1"|"2"
-
-"Stumble"|"Blue"|"1U"|"2"|"Counter target spell unless itï¿½s controller pays 2 "|"Quick Spell"|""|"U"|""|""|"1"|"1"|"2"
-
-"Cool Off"|"Blue"|"UU"|"2"|"All summons get -2 attack until your next turn"|"Quick Spell"|""|"U"|""|""|"0"|"0"|"2"
-
-"Bottomless Bag"|"Blue"|"2U"|"3"|"T, discard a card: Return a card from your storage to your hand "|"Construct"|"Item"|"U"|""|""|"2"|"1"|"2"
-
-"Mind Prick"|"Blue"|"U"|"1"|"Deal one damage to target player, draw a card."|"Quick Spell"|"Mind"|"U"|""|""|"0"|"0"|"1"
-
-"Counterburst"|"Blue"|"1UU"|"3"|"Fragile. Counter target card, its controller aetherizes cards from their library equal to the card's mana cost."|"Quick Spell"|"Mind"|"U"|""|""|"1"|"1"|"3"
-
-"Better Idea"|"Blue"|"1UU"|"3"|"Counter a spell you control to aetherize X cards from it's controller's deck where X is twice that card's mana cost."|"Quick Spell"|""|""|""|""|"1"|"1"|"3"
-
-"Curious Eye"|"Blue"|"U"|"1"|"Draw 2 cards"|"Quick Spell"|"Mind"|"C"|""|""|"0"|"0"|"1"
-
-"Shoplift"|"Blue"|"3U"|""|"Look at the top 3 cards of your deck, put two into your hand and the other into storage. Deal 2 damage to target player."|"Quick Spell"|"Trickery"|"U"|""|""|""|""|""
-
-"Talk Down"|"Blue"|"1UU"|""|"Counter target spell with mana value 4 or less. Deal 1 damage to target player."|"Quick Spell"|"Arcane"|"U"|""|""|""|""|""
-
-"Make A Stink"|"Blue"|"2UUU"|""|"Deal 3 damage to your opponent, return two permanents to their ownerï¿½s hands."|"Spell"|"Arcane"|"U"|""|""|""|""|""
-
-"Take Backsies"|"Blue"|"U"|""|"Return target card to its ownerï¿½s hand, its owner adds mana equal to its mana cost. Deal 1 damage to that player for each mana that drains from their pool."|"Quick Spell"|""|"C"|""|""|""|""|""
-
-"Shocking Escape"|"Blue"|"1U"|""|"Return target summon to its owners hand, deal 2 damage to its controller."|"Spell"|""|"U"|""|""|""|""|""
-
-"Equalize"|"Blue"|"2UUU"|""|"Requirements: -the difference between each players life total is at least 7 Each life total becomes 10"|"Ritual Spell"|"Arcane"|"U"|""|""|""|""|""
-
-"Shove"|"Blue"|"U"|""|"Return target summon to its ownerï¿½s hand. They may retain one additional card next turn."|"Quick Spell"|""|"C"|""|""|""|""|""
-
-"Repel"|"Blue"|"2U"|""|"Return target summon to itï¿½s owners hand. Deal 1 damage."|"Spell"|"Arcane"|"U"|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
-
-"Spirit Of The End"|"Black"|"BB"|"2"|"Your opponent takes your overdraw damage."|"Summon"|"Geist"|"B"|""|""|"0"|"0"|"2"
-
-"Head Thrall"|"Black"|"1BBBB"|"5"|"Abilities of Thralls you control trigger an additional time."|"Summon"|"Thrall Lord"|"B"|""|""|"1"|"1"|"5"
-
-"Sharing is Caring"|"Black"|"B"|"1"|"Split second. Exile a card from your opponent's storage, you may cast it this turn, it gains fragile."|"Quick Spell"|""|"B"|""|""|"0"|"0"|"1"
-
-"Prick"|"Black"|"B"|"1"|"Deal one damage to each player, then draw a card."|"Quick Spell"|""|"C"|""|""|"0"|"0"|"1"
-
-"Breathe"|"Black"|"B"|"1"|"Gain 1 life, then draw a card."|"Quick Spell"|""|"C"|""|""|"0"|"0"|"1"
-
-"Life Transferrence"|"Black"|"1BBBB"|"5"|"Requirements: -gained life twice this turn -lost life twice this turn. Deal 8 damage to target player and gain 4 life"|"Ritual Spell"|""|"B"|""|""|"1"|"1"|"5"
-
-"Fleeting Split"|"Black"|"BBB"|"3"|"Destroy target Summon you control, create two tokens copies of it. Sacrifice them at the end of your turn. "|"Quick Spell"|""|"B"|""|""|"0"|"0"|"3"
-
-"Underling"|"Black"|"1B"|"2"|"When Underling enters, draw a card. "|"Summon"|"Minion"|"B"|"0"|""|"1"|"1"|"2"
-
-"Lemming Leader"|"Black"|"1BB"|"3"|"When this enters, put a lemming with less than or equal to mana value from your reserve into play."|"Summon"|"Familiar Lemming"|"B"|"0"|""|"1"|"1"|"3"
-
-"Lemming Lout"|"Black"|"3BB"|"5"|"When this enters, put a lemming with less than or equal to mana value from your reserve into play. When this deals damage to an opponent, up to one other Lemming deals one damage to that player also. This ability triggers only once per turn."|"Summon"|"Familiar Lemming"|"B"|"1"|""|"3"|"1"|"3"
-
-"Lemming Lyricist"|"Black"|"2BB"|"4"|"When this enters, target opponent aetherizes a card from their hand, then put a lemming with less than or equal to mana value from your reserve into play."|"Summon"|"Familiar Lemming"|"B"|"0"|""|"2"|"1"|"3"
-
-"Lemming Lord"|"Black"|"BB"|"2"|"Requirements: control 3 lemmings. When this enters sac any number of other familiars to deal that much dmg to both players and draw that many cards "|"Ritual Summon"|"Familiar Lemming"|"BB"|"0"|""|"0"|"0"|"2"
-
-"Discerning Eye"|"Black"|"B"|"1"|"Look at the top two cards of your deck, store one and aetherize the other "|"Quick Spell"|"Eye"|"C"|""|""|"0"|"0"|"1"
-
-"Scowling Prick"|"Black"|"1B"|""|"When this enters, deal 1 damage to a player."|"Summon"|"Minion"|"B"|""|""|""|""|""
-
-"Ravenous Archfiend"|"Black"|"2BBBB"|""|"Requirement: sacrifice 3 summons. At the end of your turn, sacrifice a summon, if you donï¿½t, this summon deals damage to you instead of your opponent."|"Ritual Summon"|"Demon"|"BB"|"6"|""|""|""|""
-
-"Concuss"|"Black"|"1BB"|""|"Deal 2 damage to target player, that player draws one less card on their next draw step."|"Spell"|""|"B"|""|""|""|""|""
-
-"Shrieking Horror"|"Black"|"2BB"|""|"When this summon enters, each player aetherizes their hand."|"Summon"|"Nasty"|"B"|"0"|""|""|""|""
-
-"Value Extraction"|"Black"|"1BB"|""|"Sacrifice any number of permanents, draw that many cards."|"Spell"|""|"B"|""|""|""|""|""
-
-"Muck Slinger"|"Black"|"1B"|""|"When this enters, deal 1 damage and each player aetherizes a card from their hand."|"Summon"|"Minion"|"B"|"0"|""|""|""|""
-
-"Annoying Sneak"|"Black"|"1BB"|""|"When this enters, draw a card and your opponent aetherizes a card from their storage."|"Summon"|"Minion"|"B"|"0"|""|""|""|""
-
-"Soul Pyre"|"Black"|"1BBB"|""|"Requirements: Sacrifice X summons Deal X damage"|"Ritual Spell"|""|"B"|""|""|""|""|""
-
-"Old One"|"Black"|"4BBBB"|""|"Requirements: -sacrifice a summon -aetherize 6 cards from your hand Your hand size is 3"|"Ritual Summon"|"Freako"|"BB"|"10"|""|""|""|""
-
-"Demonic Tutor"|"Black"|"2BBB"|""|"Requirement - sacrifice 3 summons When this enters and when you draw for turn, draw two cards."|"Ritual Summon"|"Demon"|"B"|"4"|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-"Combo"|"Red"|"1R"|"2"|"Deal 2 damage to target player, then, if you have cast another spell this turn, draw a card. "|"Quick Spell"|"Flame"|"R"|""|""|"1"|"1"|"2"
-
-"Red Advantage Engine"|"Red"|"3R"|"4"|"As an additional cost to play this card, exile one card from your hand At the beginning of your main phase, draw two cards then discard a card at random "|"Summon"|"Construct"|"R"|""|""|"3"|"1"|"2"
-
-"Obstinate Familiar"|"Red"|"1R"|"2"|"If you would draw a card, you may instead not. "|"Summon"|"Familiar"|"R"|""|""|"1"|"1"|"2"
-
-"Lightning Strike"|"Red"|"1R"|"2"|"Deal 3 damage to target player."|"Quick Spell"|"Zap"|"R"|""|""|"1"|"1"|"2"
-
-"Big eff off dragon buddy"|"Red"|"4RRRR"|"8"|"If a source you control would deal damage, deal 2 more damage instead."|"Summon"|"Familiar"|"R"|"2"|""|"4"|"1"|"5"
-
-"Red removal idea"|"Red"|"XR"|"1"|"Deal 1 damage to target player, then aetherize the top card of your library, you may play it this turn. "|"Quick Spell "|""|"R"|""|""|"0"|"X"|"2"
-
+"Name"|"Color"|"Mana Cost"|"MV"|"Oracle Text"|"Type"|"Subtype"|"Expend Value"|"ATK"|""|""|""|""
+"Paranoid Puppy"|"White"|"W"|"1"|"When you discard a card, you may send that card to the bottom of your deck instead."|"Summon"|"Familar"|"W"|"0"|""|"0"|"0"|"1"
+"Axolotl Friend"|"White"|"1W"|"2"|"At the start of your end step, gain 1 life for each card in your reserve."|"Summon"|"Familiar"|"W"|"0"|""|"1"|"1"|"2"
+"Recover"|"White"|"1W"|"2"|"If you lost life this turn, gain 5 life "|"Quick Spell"|"Trap"|"W"|""|""|"1"|"1"|"2"
+"Grand Aegis"|"White"|"1WWWW"|"5"|"Requirements: Control two constructs. You take half damage, rounded up."|"Ritual Summon"|"Construct"|"W"|"0"|""|"1"|"1"|"5"
+"Wreen Shock"|"White"|"W"|"1"|"Deal 2 damage to target player."|"Quick Spell"|"Life"|"C"|""|""|"0"|"0"|"1"
+"Mend Self"|"White"|"1WW"|"3"|"If you have 7 or less life, gain 7 life, otherwise gain 4 life "|"Quick Spell"|"Life"|"W"|""|""|"1"|"1"|"3"
+"Soul Explosion"|"White"|"2WWWW"|"6"|"Deal 8 damage to target player and 4 damage to yourself"|"Spell"|"Life"|"W"|""|""|"2"|"1"|"5"
+"Watchful Eye"|"White"|"W"|"1"|"The next time target permanent would be destroyed, it isn't instead."|"Quick Spell"|"Eye"|"C"|""|""|"0"|"0"|"1"
+"Emergency Stitches"|"White"|"1WW"|"3"|"If you have 7 or less life, gain 7 life, otherwise gain 4 life"|"Quick Spell"|"Life"|"W"|""|""|"1"|"1"|"3"
+"Lifewield"|"White"|"1WW"|"3"|"Deal 5 damage to target opponent and deal 3 damage to yourself. "|"Quick Spell"|"Life"|"W"|""|""|"1"|"1"|"3"
+"Overpower"|"White"|"WWWWWW"|"6"|"Pay up to half your current hp to deal damage to an opponent"|"Spell"|"Life"|"W"|""|""|"0"|"0"|"6"
+"Mutual Assurance"|"White"|"2W"|"3"|"Deal 4 damage to each player"|"Spell"|"Life"|"W"|""|""|"2"|"1"|"2"
+"Exertion"|"White"|"1WW"|"3"|"Deal 2 damage to yourself, choose one: -destroy target permanent -deal 3 damage to target player"|"Spell"|""|"W"|""|""|"1"|"1"|"3"
+"Reset"|"White"|"WW"|""|"Gain life equal to the damage that was dealt to you this turn."|"Spell"|"Life"|"W"|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
+""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
+"Mutual Ascension"|"Blue"|"3UUUUU"|"8"|"Each player may cast their first spell on each of their turns without paying its mana cost"|"Construct"|""|"B"|""|""|"3"|"1"|"6"
+"Grand Spirit Summoning"|"Blue"|"UUUUU"|"5"|"Aetherize cards from your library until you reveal a Geist, then put it into play. "|"Spell"|"Ethereal"|"U"|""|""|"0"|"0"|"5"
+"Annoying Poltergeist"|"Blue"|"1UU"|"3"|"At the end of your turn, any number of target players aetherizes the top 6 cards of their library "|"Summon"|"Familiar Geist"|"U"|"0"|""|"1"|"1"|"3"
+"Annoying Mage's Friend"|"Blue"|"2U"|"3"|"You may keep up to one additional card when you discard."|"Summon"|""|"U"|"0"|""|"2"|"1"|"2"
+"Neurotoxin"|"Blue"|"1UU"|"3"|"After each player draws for turn, they exile a card from their hand and the top 3 cards of their library"|"Construct"|"Neurotoxin"|"U"|""|""|"1"|"1"|"3"
+"Mind's Triumph"|"Blue"|"1UUU"|"4"|"Requirements: Have ten or more cards in hand. Target Opponent exiles all but the top ten cards of their library."|"Ritual Spell"|"Mental"|"U"|""|""|"1"|"1"|"4"
+"Increasing Returns"|"Blue"|"1U"|"2"|"You may run up to 5 of this card in your deck Draw a card, then draw a card for each Increasing Returns in your storage and aether."|"Spell"|""|"C"|""|""|"1"|"1"|"2"
+"Stumble"|"Blue"|"1U"|"2"|"Counter target spell unless it’s controller pays 2 "|"Quick Spell"|""|"U"|""|""|"1"|"1"|"2"
+"Cool Off"|"Blue"|"UU"|"2"|"All summons get -2 attack until your next turn"|"Quick Spell"|""|"U"|""|""|"0"|"0"|"2"
+"Bottomless Bag"|"Blue"|"2U"|"3"|"T, discard a card: Return a card from your storage to your hand "|"Construct"|"Item"|"U"|""|""|"2"|"1"|"2"
+"Mind Prick"|"Blue"|"U"|"1"|"Deal one damage to target player, draw a card."|"Quick Spell"|"Mind"|"U"|""|""|"0"|"0"|"1"
+"Counterburst"|"Blue"|"1UU"|"3"|"Fragile. Counter target card, its controller aetherizes cards from their library equal to the card's mana cost."|"Quick Spell"|"Mind"|"U"|""|""|"1"|"1"|"3"
+"Better Idea"|"Blue"|"1UU"|"3"|"Counter a spell you control to aetherize X cards from it's controller's deck where X is twice that card's mana cost."|"Quick Spell"|""|""|""|""|"1"|"1"|"3"
+"Curious Eye"|"Blue"|"U"|"1"|"Draw 2 cards"|"Quick Spell"|"Mind"|"C"|""|""|"0"|"0"|"1"
+"Shoplift"|"Blue"|"3U"|""|"Look at the top 3 cards of your deck, put two into your hand and the other into storage. Deal 2 damage to target player."|"Quick Spell"|"Trickery"|"U"|""|""|""|""|""
+"Talk Down"|"Blue"|"1UU"|""|"Counter target spell with mana value 4 or less. Deal 1 damage to target player."|"Quick Spell"|"Arcane"|"U"|""|""|""|""|""
+"Make A Stink"|"Blue"|"2UUU"|""|"Deal 3 damage to your opponent, return two permanents to their owner’s hands."|"Spell"|"Arcane"|"U"|""|""|""|""|""
+"Take Backsies"|"Blue"|"U"|""|"Return target card to its owner’s hand, its owner adds mana equal to its mana cost. Deal 1 damage to that player for each mana that drains from their pool."|"Quick Spell"|""|"C"|""|""|""|""|""
+"Shocking Escape"|"Blue"|"1U"|""|"Return target summon to its owners hand, deal 2 damage to its controller."|"Spell"|""|"U"|""|""|""|""|""
+"Equalize"|"Blue"|"2UUU"|""|"Requirements: -the difference between each players life total is at least 7 Each life total becomes 10"|"Ritual Spell"|"Arcane"|"U"|""|""|""|""|""
+"Shove"|"Blue"|"U"|""|"Return target summon to its owner’s hand. They may retain one additional card next turn."|"Quick Spell"|""|"C"|""|""|""|""|""
+"Repel"|"Blue"|"2U"|""|"Return target summon to it’s owners hand. Deal 1 damage."|"Spell"|"Arcane"|"U"|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
+"Spirit Of The End"|"Black"|"BB"|"2"|"Your opponent takes your overdraw damage."|"Summon"|"Geist"|"B"|""|""|"0"|"0"|"2"
+"Head Thrall"|"Black"|"1BBBB"|"5"|"Abilities of Thralls you control trigger an additional time."|"Summon"|"Thrall Lord"|"B"|""|""|"1"|"1"|"5"
+"Sharing is Caring"|"Black"|"B"|"1"|"Split second. Exile a card from your opponent's storage, you may cast it this turn, it gains fragile."|"Quick Spell"|""|"B"|""|""|"0"|"0"|"1"
+"Prick"|"Black"|"B"|"1"|"Deal one damage to each player, then draw a card."|"Quick Spell"|""|"C"|""|""|"0"|"0"|"1"
+"Breathe"|"Black"|"B"|"1"|"Gain 1 life, then draw a card."|"Quick Spell"|""|"C"|""|""|"0"|"0"|"1"
+"Life Transferrence"|"Black"|"1BBBB"|"5"|"Requirements: -gained life twice this turn -lost life twice this turn. Deal 8 damage to target player and gain 4 life"|"Ritual Spell"|""|"B"|""|""|"1"|"1"|"5"
+"Fleeting Split"|"Black"|"BBB"|"3"|"Destroy target Summon you control, create two tokens copies of it. Sacrifice them at the end of your turn. "|"Quick Spell"|""|"B"|""|""|"0"|"0"|"3"
+"Underling"|"Black"|"1B"|"2"|"When Underling enters, draw a card. "|"Summon"|"Minion"|"B"|"0"|""|"1"|"1"|"2"
+"Lemming Leader"|"Black"|"1BB"|"3"|"When this enters, put a lemming with less than or equal to mana value from your reserve into play."|"Summon"|"Familiar Lemming"|"B"|"0"|""|"1"|"1"|"3"
+"Lemming Lout"|"Black"|"3BB"|"5"|"When this enters, put a lemming with less than or equal to mana value from your reserve into play. When this deals damage to an opponent, up to one other Lemming deals one damage to that player also. This ability triggers only once per turn."|"Summon"|"Familiar Lemming"|"B"|"1"|""|"3"|"1"|"3"
+"Lemming Lyricist"|"Black"|"2BB"|"4"|"When this enters, target opponent aetherizes a card from their hand, then put a lemming with less than or equal to mana value from your reserve into play."|"Summon"|"Familiar Lemming"|"B"|"0"|""|"2"|"1"|"3"
+"Lemming Lord"|"Black"|"BB"|"2"|"Requirements: control 3 lemmings. When this enters sac any number of other familiars to deal that much dmg to both players and draw that many cards "|"Ritual Summon"|"Familiar Lemming"|"BB"|"0"|""|"0"|"0"|"2"
+"Discerning Eye"|"Black"|"B"|"1"|"Look at the top two cards of your deck, store one and aetherize the other "|"Quick Spell"|"Eye"|"C"|""|""|"0"|"0"|"1"
+"Scowling Prick"|"Black"|"1B"|""|"When this enters, deal 1 damage to a player."|"Summon"|"Minion"|"B"|""|""|""|""|""
+"Ravenous Archfiend"|"Black"|"2BBBB"|""|"Requirement: sacrifice 3 summons. At the end of your turn, sacrifice a summon, if you don’t, this summon deals damage to you instead of your opponent."|"Ritual Summon"|"Demon"|"BB"|"6"|""|""|""|""
+"Concuss"|"Black"|"1BB"|""|"Deal 2 damage to target player, that player draws one less card on their next draw step."|"Spell"|""|"B"|""|""|""|""|""
+"Shrieking Horror"|"Black"|"2BB"|""|"When this summon enters, each player aetherizes their hand."|"Summon"|"Nasty"|"B"|"0"|""|""|""|""
+"Value Extraction"|"Black"|"1BB"|""|"Sacrifice any number of permanents, draw that many cards."|"Spell"|""|"B"|""|""|""|""|""
+"Muck Slinger"|"Black"|"1B"|""|"When this enters, deal 1 damage and each player aetherizes a card from their hand."|"Summon"|"Minion"|"B"|"0"|""|""|""|""
+"Annoying Sneak"|"Black"|"1BB"|""|"When this enters, draw a card and your opponent aetherizes a card from their storage."|"Summon"|"Minion"|"B"|"0"|""|""|""|""
+"Soul Pyre"|"Black"|"1BBB"|""|"Requirements: Sacrifice X summons Deal X damage"|"Ritual Spell"|""|"B"|""|""|""|""|""
+"Old One"|"Black"|"4BBBB"|""|"Requirements: -sacrifice a summon -aetherize 6 cards from your hand Your hand size is 3"|"Ritual Summon"|"Freako"|"BB"|"10"|""|""|""|""
+"Demonic Tutor"|"Black"|"2BBB"|""|"Requirement - sacrifice 3 summons When this enters and when you draw for turn, draw two cards."|"Ritual Summon"|"Demon"|"B"|"4"|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+"Combo"|"Red"|"1R"|"2"|"Deal 2 damage to target player, then, if you have cast another spell this turn, draw a card. "|"Quick Spell"|"Flame"|"R"|""|""|"1"|"1"|"2"
+"Red Advantage Engine"|"Red"|"3R"|"4"|"As an additional cost to play this card, exile one card from your hand At the beginning of your main phase, draw two cards then discard a card at random "|"Summon"|"Construct"|"R"|""|""|"3"|"1"|"2"
+"Obstinate Familiar"|"Red"|"1R"|"2"|"If you would draw a card, you may instead not. "|"Summon"|"Familiar"|"R"|""|""|"1"|"1"|"2"
+"Lightning Strike"|"Red"|"1R"|"2"|"Deal 3 damage to target player."|"Quick Spell"|"Zap"|"R"|""|""|"1"|"1"|"2"
+"Big eff off dragon buddy"|"Red"|"4RRRR"|"8"|"If a source you control would deal damage, deal 2 more damage instead."|"Summon"|"Familiar"|"R"|"2"|""|"4"|"1"|"5"
+"Red removal idea"|"Red"|"XR"|"1"|"Deal 1 damage to target player, then aetherize the top card of your library, you may play it this turn. "|"Quick Spell "|""|"R"|""|""|"0"|"X"|"2"
 "Fiery Culmination"|"Red"|"1RRRR"|"5"|"Requirements: Have 8 fire spells in your graveyard 
-Deal 8 damage to target player and destroy up to two target permanents "|"Ritual Spell"|"Flame"|"R"|""|""|"1"|"1"|"5"
-
-"Ballad of Flame"|"Red"|"1RR"|"3"|"At the end of your turn, deal 2 damage to any target. 3 loyalty counters."|"Summon"|"Song Flame"|"R"|""|""|"1"|"1"|"3"
-
-"Grand Inferno"|"Red"|"1RRRR"|"5"|"Cast this spell from your extra deck only if youï¿½ve cast 2 Fire Spells this turn. Deal 7 damage to any target."|"Ritual Spell"|"Flame"|"R"|""|""|"1"|"1"|"5"
-
-"Agile Shock"|"Red"|"R"|"1"|"Deal 1 damage to target player, then aetherize the top card of your library, you may play it this turn. "|"Quick Spell"|"Zap"|"R"|""|""|"0"|"0"|"1"
-
-"Sadist"|"Red"|"2R"|"3"|"Whenever you deal damage to your opponent for the first time each turn, draw a card. "|"Summon"|""|"R"|""|""|"2"|"1"|"2"
-
-"Hasty Strike"|"Red"|"2RR"|""|"You may expend cards from your hand in addition to your storage to pay for this spell. Deal 4 damage to target player"|"Spell"|"Flame"|"R"|""|""|""|""|""
-
-"Charge Up"|"Red"|"R"|"1"|"Deal 1 damage to each player, then if this is the first card you've played this turn, draw 2 cards, otherwise draw 1 card"|"Spell"|"Zap"|"R"|""|""|"0"|"0"|"1"
-
-"Odd Cheerleader"|"Red"|"2R"|""|"Whenever you play your oddth spell each turn, you get R"|"Summon"|"Minion"|"R"|""|""|""|""|""
-
-"Finisher"|"Red"|"2RRR"|""|"Deal 7 damage to target player. Cast this spell only if your opponent has 7 life."|"Spell"|"Flame"|"R"|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
-
-"Familiar Power"|"Green"|"GG"|"2"|"At the beginning of your end step, this Summon deals 1 damage to your opponent for each differently named familiar you control"|"Construct"|""|"G"|"0"|""|"0"|"0"|"2"
-
-"Slimey Squelcher"|"Green"|"3G"|"4"|"T: Copy a card you cast"|"Summon"|""|"G"|"0"|""|"3"|"1"|"2"
-
-"Actual Backup Generator"|"Green"|"GG"|"2"|"Fragile. T: Add G, when you tap this the third time sacrifice it."|"Construct"|""|""|""|""|"0"|"0"|"2"
-
-"Personal Grove"|"Green"|"GG"|"2"|"You may reduce the cost of a spell you cast by G each turn "|"Construct"|""|"G"|"0"|""|"0"|"0"|"2"
-
-"Giant Tree"|"Green"|"GGGGG"|"5"|"Requirement: -have at least 20 cards in your graveyard. At the end of your turn, destroy target permanent an opponent controls"|"Ritual Summon"|"Plant"|"GG"|"3"|""|"0"|"0"|"5"
-
-"Constrictor Vine"|"Green"|"2GG"|"4"|"Your opponentï¿½s maximum hand size is reduced by one to a minimum of 3 "|"Summon"|"Plant"|"G"|""|""|"2"|"1"|"3"
-
-"Poison Vine"|"Green"|"1G"|"2"|""|"Summon"|"Plant"|"G"|"1"|""|"1"|"1"|"2"
-
-"Hide"|"Green"|"1GG"|"3"|"Your life total canï¿½t be changed by effects your opponent controls until end of turn "|"Quick Spell"|""|"G"|""|""|"1"|"1"|"3"
-
-"Backup Generator"|"Green"|"G"|"1"|"Fragile. Draw a card."|"Quick Spell"|""|"GG"|""|""|"0"|"0"|"1"
-
-"Resource Sap"|"Green"|"XG"|"1"|"Exile up to X cards from a graveyard, then mill X cards "|"Spell"|""|""|""|""|"0"|"X"|"2"
-
+Deal 8 damage to target player and destroy up to two target permanents "|"Ritual Spell"|"Flame"|"R"|""|""|"1"|"1"|"5"
+"Ballad of Flame"|"Red"|"1RR"|"3"|"At the end of your turn, deal 2 damage to any target. 3 loyalty counters."|"Summon"|"Song Flame"|"R"|""|""|"1"|"1"|"3"
+"Grand Inferno"|"Red"|"1RRRR"|"5"|"Cast this spell from your extra deck only if you’ve cast 2 Fire Spells this turn. Deal 7 damage to any target."|"Ritual Spell"|"Flame"|"R"|""|""|"1"|"1"|"5"
+"Agile Shock"|"Red"|"R"|"1"|"Deal 1 damage to target player, then aetherize the top card of your library, you may play it this turn. "|"Quick Spell"|"Zap"|"R"|""|""|"0"|"0"|"1"
+"Sadist"|"Red"|"2R"|"3"|"Whenever you deal damage to your opponent for the first time each turn, draw a card. "|"Summon"|""|"R"|""|""|"2"|"1"|"2"
+"Hasty Strike"|"Red"|"2RR"|""|"You may expend cards from your hand in addition to your storage to pay for this spell. Deal 4 damage to target player"|"Spell"|"Flame"|"R"|""|""|""|""|""
+"Charge Up"|"Red"|"R"|"1"|"Deal 1 damage to each player, then if this is the first card you've played this turn, draw 2 cards, otherwise draw 1 card"|"Spell"|"Zap"|"R"|""|""|"0"|"0"|"1"
+"Odd Cheerleader"|"Red"|"2R"|""|"Whenever you play your oddth spell each turn, you get R"|"Summon"|"Minion"|"R"|""|""|""|""|""
+"Finisher"|"Red"|"2RRR"|""|"Deal 7 damage to target player. Cast this spell only if your opponent has 7 life."|"Spell"|"Flame"|"R"|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
+"Familiar Power"|"Green"|"GG"|"2"|"At the beginning of your end step, this Summon deals 1 damage to your opponent for each differently named familiar you control"|"Construct"|""|"G"|"0"|""|"0"|"0"|"2"
+"Slimey Squelcher"|"Green"|"3G"|"4"|"T: Copy a card you cast"|"Summon"|""|"G"|"0"|""|"3"|"1"|"2"
+"Actual Backup Generator"|"Green"|"GG"|"2"|"Fragile. T: Add G, when you tap this the third time sacrifice it."|"Construct"|""|""|""|""|"0"|"0"|"2"
+"Personal Grove"|"Green"|"GG"|"2"|"You may reduce the cost of a spell you cast by G each turn "|"Construct"|""|"G"|"0"|""|"0"|"0"|"2"
+"Giant Tree"|"Green"|"GGGGG"|"5"|"Requirement: -have at least 20 cards in your graveyard. At the end of your turn, destroy target permanent an opponent controls"|"Ritual Summon"|"Plant"|"GG"|"3"|""|"0"|"0"|"5"
+"Constrictor Vine"|"Green"|"2GG"|"4"|"Your opponent’s maximum hand size is reduced by one to a minimum of 3 "|"Summon"|"Plant"|"G"|""|""|"2"|"1"|"3"
+"Poison Vine"|"Green"|"1G"|"2"|""|"Summon"|"Plant"|"G"|"1"|""|"1"|"1"|"2"
+"Hide"|"Green"|"1GG"|"3"|"Your life total can’t be changed by effects your opponent controls until end of turn "|"Quick Spell"|""|"G"|""|""|"1"|"1"|"3"
+"Backup Generator"|"Green"|"G"|"1"|"Fragile. Draw a card."|"Quick Spell"|""|"GG"|""|""|"0"|"0"|"1"
+"Resource Sap"|"Green"|"XG"|"1"|"Exile up to X cards from a graveyard, then mill X cards "|"Spell"|""|""|""|""|"0"|"X"|"2"
 "Potion Of Burning Thorns"|"Green"|"2G"|"3"|"As an additional cost to play this spell, expend a Plant and a Fire from your storage. Sacrifice this Summon: choose one,
-destroy target permanent OR deal four damage to target player. "|"Construct"|"Potion"|""|"0"|""|"2"|"1"|"2"
-
-"Familiar Lord"|"Green"|"2GG"|"4"|"Other familiars you control get +1 attack "|"Summon"|"Familiar Lord"|"G"|"1"|""|"2"|"1"|"3"
-
-"Grass"|"Green"|"G"|"1"|"When this enters, gain 2 life "|"Summon"|"Plant"|"G"|"0"|""|"0"|"0"|"1"
-
-"Green Shock"|"Green"|"G"|"1"|"Deal 2 damage to any target"|"Quick Spell"|"Thorn"|"C"|""|""|"0"|"0"|"1"
-
-"Kind Eye"|"Green"|"G"|""|"Add a summon from your reserve to your hand."|"Quick Spell"|"Eye"|"C"|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
-
-""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
-
-""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
-
-"Fuck Red Players"|"Colorless"|"3"|"3"|"Red cards cost 1 more to play "|"Construct"|"Bullshit"|"C"|"0"|""|"3"|"1"|"1"
-
-"Extra Fuck Red Players"|"Colorless"|"5"|"5"|"Red cards cost R more to play "|"Construct"|"Bullshit"|"C"|"0"|""|"5"|"1"|"1"
-
-"Foolhardy Apprentice"|"Colorless"|"5"|"5"|"Copy each spell you cast. At the end of your turn, if you didnï¿½t cast more spells this turn than your last: Sacrifice this summon."|"Summon"|"Apprentice"|"C"|"0"|""|"5"|"1"|"1"
-
-"Intern"|"Colorless"|"0"|"1"|"The first fragile spell you cast each turn loses fragile. Fragile."|"Summon"|"Apprentice"|"C"|"0"|""|"0"|"0"|"1"
-
-"Obliterate"|"Colorless"|"4"|"4"|"Destroy target summon"|"Spell"|""|"C"|""|""|"4"|"1"|"1"
-
-"Evil Twin"|"Colorless"|"7"|"7"|"When your opponent casts a spell you may cast a copy of it "|"Summon"|""|"C"|"0"|""|"7"|"1"|"1"
-
-"Wizard Hat"|"Colorless"|"12"|"13"|"You may cast spells from your hand without paying their mana costs "|"Construct"|"Item"|"C"|"0"|""|"12"|"1"|"2"
-
-"Fraying Idol"|"Colorless"|"5"|"5"|"Whenever your opponent loses life on your turn, they exile their hand and draw up to maximum hand size "|"Construct"|""|"C"|"0"|""|"5"|"1"|"1"
-
-"Protective Statue"|"Colorless"|"3"|"3"|"Effects opponents control cannot aetherize cards from your graveyard "|"Construct"|""|"C"|"0"|""|"3"|"1"|"1"
-
-"Cursed Rock"|"Colorless"|"3"|"3"|"Whenever an opponent draws their 5th or 10th card each turn, deal two damage to them "|"Construct"|""|"C"|"0"|""|"3"|"1"|"1"
-
-"Sacrificial Dagger"|"Colorless"|"3"|"3"|"If a ritual spell would require you to sacrifice 3 or more Summons with the same type, you may sacrifice 1 less "|"Construct"|""|"C"|"0"|""|"3"|"1"|"1"
-
-"Temporary Leave"|"Colorless"|"3"|"3"|"You and your permanents cannot be targeted until the end of this turn "|"Quick Spell"|""|"C"|""|""|"3"|"1"|"1"
-
-"Tower"|"Colorless"|"4"|""|""|"Summon Construct"|""|"C"|"1"|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|""|""|""|""|""|""|""|""|""|""
-
-""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
-
-"Final Rest"|"B/W"|"2BW"|""|"Aetherize a permanent and expend 2 cards from a gy "|"Spell"|""|"B/W"|""|""|""|""|""
-
-"Achieved Omnipotence"|"R/U"|"2RRRUUU "|""|"Requirements: -have cast at least 7 spells this turn You may cast spells from your hand without paying their mana costs for the rest of this turn "|"Spell - Ritual"|""|"U/R"|""|""|""|""|""
-
-"Astral Slime"|"U/G"|"UG"|""|"When this enters, destroy a permanent."|"Summon"|"Arcane Slimey Component"|"C"|""|""|""|""|""
-
+destroy target permanent OR deal four damage to target player. "|"Construct"|"Potion"|""|"0"|""|"2"|"1"|"2"
+"Familiar Lord"|"Green"|"2GG"|"4"|"Other familiars you control get +1 attack "|"Summon"|"Familiar Lord"|"G"|"1"|""|"2"|"1"|"3"
+"Grass"|"Green"|"G"|"1"|"When this enters, gain 2 life "|"Summon"|"Plant"|"G"|"0"|""|"0"|"0"|"1"
+"Green Shock"|"Green"|"G"|"1"|"Deal 2 damage to any target"|"Quick Spell"|"Thorn"|"C"|""|""|"0"|"0"|"1"
+"Kind Eye"|"Green"|"G"|""|"Add a summon from your reserve to your hand."|"Quick Spell"|"Eye"|"C"|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
+""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
+""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
+"Fuck Red Players"|"Colorless"|"3"|"3"|"Red cards cost 1 more to play "|"Construct"|"Bullshit"|"C"|"0"|""|"3"|"1"|"1"
+"Extra Fuck Red Players"|"Colorless"|"5"|"5"|"Red cards cost R more to play "|"Construct"|"Bullshit"|"C"|"0"|""|"5"|"1"|"1"
+"Foolhardy Apprentice"|"Colorless"|"5"|"5"|"Copy each spell you cast. At the end of your turn, if you didn’t cast more spells this turn than your last: Sacrifice this summon."|"Summon"|"Apprentice"|"C"|"0"|""|"5"|"1"|"1"
+"Intern"|"Colorless"|"0"|"1"|"The first fragile spell you cast each turn loses fragile. Fragile."|"Summon"|"Apprentice"|"C"|"0"|""|"0"|"0"|"1"
+"Obliterate"|"Colorless"|"4"|"4"|"Destroy target summon"|"Spell"|""|"C"|""|""|"4"|"1"|"1"
+"Evil Twin"|"Colorless"|"7"|"7"|"When your opponent casts a spell you may cast a copy of it "|"Summon"|""|"C"|"0"|""|"7"|"1"|"1"
+"Wizard Hat"|"Colorless"|"12"|"13"|"You may cast spells from your hand without paying their mana costs "|"Construct"|"Item"|"C"|"0"|""|"12"|"1"|"2"
+"Fraying Idol"|"Colorless"|"5"|"5"|"Whenever your opponent loses life on your turn, they exile their hand and draw up to maximum hand size "|"Construct"|""|"C"|"0"|""|"5"|"1"|"1"
+"Protective Statue"|"Colorless"|"3"|"3"|"Effects opponents control cannot aetherize cards from your graveyard "|"Construct"|""|"C"|"0"|""|"3"|"1"|"1"
+"Cursed Rock"|"Colorless"|"3"|"3"|"Whenever an opponent draws their 5th or 10th card each turn, deal two damage to them "|"Construct"|""|"C"|"0"|""|"3"|"1"|"1"
+"Sacrificial Dagger"|"Colorless"|"3"|"3"|"If a ritual spell would require you to sacrifice 3 or more Summons with the same type, you may sacrifice 1 less "|"Construct"|""|"C"|"0"|""|"3"|"1"|"1"
+"Temporary Leave"|"Colorless"|"3"|"3"|"You and your permanents cannot be targeted until the end of this turn "|"Quick Spell"|""|"C"|""|""|"3"|"1"|"1"
+"Tower"|"Colorless"|"4"|""|""|"Summon Construct"|""|"C"|"1"|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|""|""|""|""|""|""|""|""|""|""
+""|""|""|"0"|""|""|""|""|""|""|"0"|"0"|"0"
+"Final Rest"|"B/W"|"2BW"|""|"Aetherize a permanent and expend 2 cards from a gy "|"Spell"|""|"B/W"|""|""|""|""|""
+"Achieved Omnipotence"|"R/U"|"2RRRUUU "|""|"Requirements: -have cast at least 7 spells this turn You may cast spells from your hand without paying their mana costs for the rest of this turn "|"Ritual Spell"|""|"U/R"|""|""|""|""|""
+"Astral Slime"|"U/G"|"UG"|""|"When this enters, destroy a permanent."|"Summon"|"Arcane Slimey Component"|"C"|""|""|""|""|""

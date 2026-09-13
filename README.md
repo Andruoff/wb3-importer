@@ -7,12 +7,11 @@ Run program
 I will add a command to refresh the CSV data.
 It will generate 2 images, assuming you provided an Extra Deck
 
-Decklist formatting example! Duplicates should be typed out additional times, I will add count functionality eventually.
+A decklist formatting example is at example_decklist.txt, formatting below.
 
+Example Name
 Main Deck:
-Paranoid Puppy
-Paranoid Puppy
-Lifewield
+1 Paranoid Puppy
 
 Extra Deck:
-Lifewield
+2 Axolotl Friend
