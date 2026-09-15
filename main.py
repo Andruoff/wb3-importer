@@ -23,6 +23,8 @@ big_font = ImageFont.truetype("times-new-roman.ttf", 22)
 medium_font = ImageFont.truetype("times-new-roman.ttf", 18)
 small_font = ImageFont.truetype("times-new-roman.ttf", 16)
 
+missing_cards = []
+
 def find_card(name):
     
     with open(filename, "r") as f:
@@ -35,7 +37,8 @@ def find_card(name):
 
                 return row
 
-    raise Exception("Card \"" + name + "\"does not exist.")
+    
+    #raise Exception("Card \"" + name + "\"does not exist.")
 
 def decklist_checker(decklist):
 
@@ -121,7 +124,7 @@ def gen_from_decklist(decklist):
             for i in range(count):
 
                 extra_deck.append(name)
-        
+    
     generate_sheet(main_deck, deck_name + "_main.jpg")
     print("main_deck.jpg made.")
     generate_sheet(extra_deck, deck_name + "_extra.jpg")
@@ -148,17 +151,19 @@ def generate_card_list(length, index):
                 card_list.append(row["Name"])
                 #print(row["Name"])
                 counter += 1
-                if counter > length:
-                    break
-            next(data)
+                if counter > length: 
+                    next(data)
             
-
+    
     return card_list
   
 def generate_card(card_name):
 
     # I should make this color depending on what it expends for maybe
     row_data = find_card(card_name)
+
+    if row_data == None:
+        return
 
     color = (245, 245, 245)
 
@@ -254,8 +259,20 @@ def generate_sheet(list, name):
 
     card_array = []
 
-    for i in list:
-        card_array.append(generate_card(i))
+    for i in range(len(list)):
+        if find_card(list[i]):
+            card_array.append(generate_card(list[i]))
+        else:
+            missing_cards.append(list[i])
+
+    if missing_cards != []:
+        print("Error! These cards were unable to be found:")
+        print(missing_cards)
+        print("Please start over and try again.")
+        quit()
+
+    # for i in list:
+    #     card_array.append(generate_card(i))
 
     new_sheet = Image.new("RGB", (SHEET_WIDTH, SHEET_HEIGHT))
 
