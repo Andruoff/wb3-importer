@@ -20,11 +20,9 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-# Turn these into dictionaries
 
 CARD_WIDTH = 250
 CARD_HEIGHT = 350
-
 
 SHEET_CARD_HEIGHT = 8
 SHEET_CARD_WIDTH = 10
