@@ -1,1 +1,19 @@
-PASTE HERE
+Second_Example_Deck
+Main Deck:
+8 Paranoid Puppy
+8 Paranoid Puppy
+8 Paranoid Puppy
+8 Paranoid Puppy
+8 Paranoid Puppy
+8 Lifewield
+8 Lifewield
+8 Lifewield
+8 Lifewield
+8 Lifewield
+
+Extra Deck:
+5 Lifewield
+5 Lifewield
+5 Lifewield
+5 Lifewield
+5 Lifewield

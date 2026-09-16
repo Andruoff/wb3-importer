@@ -26,7 +26,7 @@ def resource_path(relative_path):
 CARD_WIDTH = 250
 CARD_HEIGHT = 350
 
-SHEET_CARD_HEIGHT = 8
+SHEET_CARD_HEIGHT = 4
 SHEET_CARD_WIDTH = 10
 SHEET_SIZE = SHEET_CARD_HEIGHT * SHEET_CARD_WIDTH
 SHEET_HEIGHT = CARD_HEIGHT * SHEET_CARD_HEIGHT
@@ -164,10 +164,24 @@ def gen_from_decklist(decklist):
     else:
         exe_dir = os.path.dirname(os.path.abspath(__file__))
     print(exe_dir + "\\" + deck_name + "_main.jpg")
-    generate_sheet(main_deck, main_dims, exe_dir + "\\" + deck_name + "_main.jpg")
-    print("main_deck.jpg made.")
+
+    # deck splitter
+
+    main_1 = []
+    main_2 = []
+    for i in range(0, 40):
+        print(i)
+        main_1.append(main_deck[i])
+    for i in range(40, 80):
+        print(i)
+        main_2.append(main_deck[i])
+
+    
+    generate_sheet(main_1, main_dims, exe_dir + "\\" + deck_name + "_main_1.jpg")
+    generate_sheet(main_2, main_dims, exe_dir + "\\" + deck_name + "_main_2.jpg")
+    print("Main Decks made.")
     generate_sheet(extra_deck, extra_dims, exe_dir + "\\" + deck_name + "_extra.jpg")
-    print("extra_deck.jpg made.")
+    print("Extra Deck made")
 
     return
 
@@ -272,7 +286,7 @@ def set_up():
     def reimport():
         print("Would you like to update the card database? (Y/N)")
         answer = input()
-        print("Answer: \"" + answer + "\"")
+        #print("Answer: \"" + answer + "\"")
         match answer:
             case "Y" | "y" | "Yes" | "yes":
                 print("Reading sheet...")
