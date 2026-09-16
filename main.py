@@ -6,24 +6,58 @@ from PIL import Image, ImageGrab, ImageDraw, ImageText, ImageFont
 import random
 import textwrap
 
+import sys
+import os
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
+# Turn these into dictionaries
+
 CARD_WIDTH = 250
 CARD_HEIGHT = 350
+
+
 SHEET_CARD_HEIGHT = 8
 SHEET_CARD_WIDTH = 10
 SHEET_SIZE = SHEET_CARD_HEIGHT * SHEET_CARD_WIDTH
 SHEET_HEIGHT = CARD_HEIGHT * SHEET_CARD_HEIGHT
 SHEET_WIDTH = CARD_WIDTH * SHEET_CARD_WIDTH
 
+main_dims = {"card_height": SHEET_CARD_HEIGHT, "card_width": SHEET_CARD_WIDTH, "size": SHEET_SIZE, "height": SHEET_HEIGHT, "width": SHEET_WIDTH}
+
+E_SHEET_CARD_HEIGHT = 2
+E_SHEET_CARD_WIDTH = 10
+E_SHEET_SIZE = E_SHEET_CARD_HEIGHT * E_SHEET_CARD_WIDTH
+E_SHEET_HEIGHT = CARD_HEIGHT * E_SHEET_CARD_HEIGHT
+E_SHEET_WIDTH = CARD_WIDTH * E_SHEET_CARD_WIDTH
+
+extra_dims = {"card_height": E_SHEET_CARD_HEIGHT, "card_width": E_SHEET_CARD_WIDTH, "size": E_SHEET_SIZE, "height": E_SHEET_HEIGHT, "width": E_SHEET_WIDTH}
+
+
 reader = gspread.api_key("AIzaSyDOsvY1riiBGMfHEN4m0oLA2V4TENxn2OU")
 sheet = reader.open_by_key("1RyVuXuTbjReXnPB0BYGq-aMEtmI_Z3HK2iEkngKHFN4")
-filename = "card_data.csv"
+filename = resource_path("card_data.csv")
+fontfilename = resource_path("times-new-roman.ttf")
+decklistfile = resource_path("decklist_here.txt")
 
-huge_font = ImageFont.truetype("times-new-roman.ttf", 28)
-big_font = ImageFont.truetype("times-new-roman.ttf", 22)
-medium_font = ImageFont.truetype("times-new-roman.ttf", 18)
-small_font = ImageFont.truetype("times-new-roman.ttf", 16)
+huge_font = ImageFont.truetype(fontfilename, 28)
+big_font = ImageFont.truetype(fontfilename, 22)
+medium_font = ImageFont.truetype(fontfilename, 18)
+small_font = ImageFont.truetype(fontfilename, 16)
 
 missing_cards = []
+
+# note to self. python -m auto_py_to_exe to export this
+# "C:\Users\andre\AppData\Local\Python\pythoncore-3.14-64\fribidi.dll"
 
 def find_card(name):
     
@@ -124,10 +158,15 @@ def gen_from_decklist(decklist):
             for i in range(count):
 
                 extra_deck.append(name)
-    
-    generate_sheet(main_deck, deck_name + "_main.jpg")
+
+    if getattr(sys, "frozen", False):
+        exe_dir = os.path.dirname(sys.executable)
+    else:
+        exe_dir = os.path.dirname(os.path.abspath(__file__))
+    print(exe_dir + "\\" + deck_name + "_main.jpg")
+    generate_sheet(main_deck, main_dims, exe_dir + "\\" + deck_name + "_main.jpg")
     print("main_deck.jpg made.")
-    generate_sheet(extra_deck, deck_name + "_extra.jpg")
+    generate_sheet(extra_deck, extra_dims, exe_dir + "\\" + deck_name + "_extra.jpg")
     print("extra_deck.jpg made.")
 
     return
@@ -255,7 +294,7 @@ def set_up():
     #     writer = csv.writer(f, quoting=csv.QUOTE_ALL, delimiter="|")
     #     writer.writerows(sheet.sheet1.get_all_values())   
         
-def generate_sheet(list, name):
+def generate_sheet(list, dims, name):
 
     card_array = []
 
@@ -274,12 +313,12 @@ def generate_sheet(list, name):
     # for i in list:
     #     card_array.append(generate_card(i))
 
-    new_sheet = Image.new("RGB", (SHEET_WIDTH, SHEET_HEIGHT))
+    new_sheet = Image.new("RGB", (dims["width"], dims["height"]))
 
     array_counter = 0
 
-    for i in range(SHEET_CARD_HEIGHT):
-        for k in range(SHEET_CARD_WIDTH):
+    for i in range(dims["card_height"]):
+        for k in range(dims["card_width"]):
             if array_counter < len(list):
                 to_paste = card_array[array_counter]
                 new_sheet.paste(to_paste, (CARD_WIDTH * k, CARD_HEIGHT * i))
@@ -292,9 +331,10 @@ def main():
 
     set_up()
 
-    gen_from_decklist("decklist_here.txt")
+    gen_from_decklist(decklistfile)
 
     print("Complete. Program finishing.")
+    input("Say Bye")
 
 if __name__ == '__main__':
     main()
