@@ -3,7 +3,7 @@
 
 # note to self. python -m auto_py_to_exe to export this
 # "C:\Users\andre\AppData\Local\Python\pythoncore-3.14-64\fribidi.dll"
-
+# pyinstaller --noconfirm --onedir --console --name "WB3_TTS_Importer_V1.0.3" --add-binary "C:\Users\andre\AppData\Local\Python\pythoncore-3.14-64\fribidi.dll;." --add-data "C:\Users\andre\OneDrive\Desktop\wb3-tts-importer\card_data.csv;." --add-data "C:\Users\andre\OneDrive\Desktop\wb3-tts-importer\decklist_here.txt;." --add-data "C:\Users\andre\OneDrive\Desktop\wb3-tts-importer\example_decklist.txt;." --add-data "C:\Users\andre\OneDrive\Desktop\wb3-tts-importer\README.md;." --add-data "C:\Users\andre\OneDrive\Desktop\wb3-tts-importer\times-new-roman.ttf;."  "C:\Users\andre\OneDrive\Desktop\wb3-tts-importer\main.py"
 import gspread
 import csv
 import PIL
@@ -178,12 +178,12 @@ def gen_from_decklist(decklist):
     if len(main_deck) != 80:
         restart("Your deck has " + str(len(main_deck)) + " cards in it instead of 80!")
 
-    for i in range(0, 39):
-        #print(i)
+    for i in range(0, 40):
+        print(i)
         if len(main_deck) >= i:
             main_1.append(main_deck[i])
-    for i in range(40, 79):
-        #print(i)
+    for i in range(40, 80):
+        print(i)
         if len(main_deck) >= i:
             main_2.append(main_deck[i])
 
