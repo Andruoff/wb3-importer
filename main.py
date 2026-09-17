@@ -51,7 +51,7 @@ reader = gspread.api_key("AIzaSyDOsvY1riiBGMfHEN4m0oLA2V4TENxn2OU")
 sheet = reader.open_by_key("1RyVuXuTbjReXnPB0BYGq-aMEtmI_Z3HK2iEkngKHFN4")
 filename = resource_path("card_data.csv")
 fontfilename = resource_path("times-new-roman.ttf")
-decklistfile = resource_path("example_decklist.txt")
+decklistfile = resource_path("decklist_here.txt")
 
 huge_font = ImageFont.truetype(fontfilename, 28)
 big_font = ImageFont.truetype(fontfilename, 22)
