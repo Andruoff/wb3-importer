@@ -1,1 +1,34 @@
-PASTE HERE
+White_Generic
+Main Deck:
+6 Lifewield
+3 Bloody Search
+3 Badass Name
+2 Bloodletter
+2 Placating Chant
+3 Conduit Cannon
+2 Watchful Eye
+4 Selfmend
+3 Wreen Shock
+3 Soul Explosion
+2 Overpower
+3 Mutual Assurance
+3 Mid Lifegain
+3 Emergency Stitches
+3 Exertion
+3 Reset
+3 Lifeblast
+3 Recoil Slam
+3 Overwhelming Blast
+2 Second Wind 2
+3 Exile
+3 Mana Burn
+3 Axolotl Friend
+2 Lifeforce Protector
+3 Balmer
+3 Hungry Silkworm
+3 Vein Rupture
+1 Reckless Protection
+
+Extra Deck:
+3 Lethality Transfer
+3 Grand Aegis

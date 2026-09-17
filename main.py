@@ -1,4 +1,8 @@
 # Add a function that checks when this was most recently updated.
+# fix capitalization stuff
+
+# note to self. python -m auto_py_to_exe to export this
+# "C:\Users\andre\AppData\Local\Python\pythoncore-3.14-64\fribidi.dll"
 
 import gspread
 import csv
@@ -11,8 +15,10 @@ import textwrap
 import sys
 import os
 
+# Yoinked code
+
 def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
+    # Get absolute path to resource, works for dev and for PyInstaller
     try:
         # PyInstaller creates a temp folder and stores path in _MEIPASS
         base_path = sys._MEIPASS
@@ -20,8 +26,6 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
 
     return os.path.join(base_path, relative_path)
-
-
 
 CARD_WIDTH = 250
 CARD_HEIGHT = 350
@@ -47,7 +51,7 @@ reader = gspread.api_key("AIzaSyDOsvY1riiBGMfHEN4m0oLA2V4TENxn2OU")
 sheet = reader.open_by_key("1RyVuXuTbjReXnPB0BYGq-aMEtmI_Z3HK2iEkngKHFN4")
 filename = resource_path("card_data.csv")
 fontfilename = resource_path("times-new-roman.ttf")
-decklistfile = resource_path("decklist_here.txt")
+decklistfile = resource_path("example_decklist.txt")
 
 huge_font = ImageFont.truetype(fontfilename, 28)
 big_font = ImageFont.truetype(fontfilename, 22)
@@ -55,9 +59,6 @@ medium_font = ImageFont.truetype(fontfilename, 18)
 small_font = ImageFont.truetype(fontfilename, 16)
 
 missing_cards = []
-
-# note to self. python -m auto_py_to_exe to export this
-# "C:\Users\andre\AppData\Local\Python\pythoncore-3.14-64\fribidi.dll"
 
 def find_card(name):
     
@@ -67,7 +68,7 @@ def find_card(name):
 
 
         for row in data:
-            if row["Name"] == name:
+            if row["Name"].lower() == str(name).lower():
 
                 return row
 
@@ -79,8 +80,9 @@ def decklist_checker(decklist):
     print("Have you pasted your decklist into \"decklist_here\" properly? (Y/N)")
     answer = input()
     match answer:
-        case "N", "n", "no", "No":
+        case "N" | "n" | "no" | "No":
             print("Please do that before running the program thank you.")
+            input("Input anything to quit. ")
             quit()
         case _:
             pass
@@ -169,12 +171,14 @@ def gen_from_decklist(decklist):
 
     main_1 = []
     main_2 = []
-    for i in range(0, 40):
-        print(i)
-        main_1.append(main_deck[i])
-    for i in range(40, 80):
-        print(i)
-        main_2.append(main_deck[i])
+    for i in range(0, 39):
+        #print(i)
+        if len(main_deck) >= i:
+            main_1.append(main_deck[i])
+    for i in range(40, 79):
+        #print(i)
+        if len(main_deck) >= i:
+            main_2.append(main_deck[i])
 
     
     generate_sheet(main_1, main_dims, exe_dir + "\\" + deck_name + "_main_1.jpg")
@@ -322,6 +326,7 @@ def generate_sheet(list, dims, name):
         print("Error! These cards were unable to be found:")
         print(missing_cards)
         print("Please start over and try again.")
+        input("Input anything to quit. ")
         quit()
 
     # for i in list:
