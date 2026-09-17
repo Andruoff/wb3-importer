@@ -1,5 +1,5 @@
 # Add a function that checks when this was most recently updated.
-# fix capitalization stuff
+# fix spaces in the title
 
 # note to self. python -m auto_py_to_exe to export this
 # "C:\Users\andre\AppData\Local\Python\pythoncore-3.14-64\fribidi.dll"
@@ -60,6 +60,11 @@ small_font = ImageFont.truetype(fontfilename, 16)
 
 missing_cards = []
 
+def restart(message):
+    print(message)
+    input("Input anything to quit. ")
+    quit()
+
 def find_card(name):
     
     with open(filename, "r") as f:
@@ -81,9 +86,7 @@ def decklist_checker(decklist):
     answer = input()
     match answer:
         case "N" | "n" | "no" | "No":
-            print("Please do that before running the program thank you.")
-            input("Input anything to quit. ")
-            quit()
+            restart("Please do that before running the program thank you.")
         case _:
             pass
 
@@ -91,20 +94,20 @@ def decklist_checker(decklist):
             lines = f.readlines()
     
             if lines[0].strip() == "PASTE HERE":
-                print("You forgot to paste your decklist, or pasted it to the wrong spot! Please start over.")
-                exit()
+                restart("You forgot to paste your decklist, or pasted it to the wrong spot! Please start over.")
     
             if lines[0].strip() == "Main Deck:":
-                print("You forgot the deck name! Please check  your formatting against example_decklist.txt. Please start over.")
-                decklist_checker(decklist)
-    
+                restart("You forgot the deck name! Please check  your formatting against example_decklist.txt. Please start over.")
+
             deck_name = lines[0].strip()
-    
+
+            if deck_name.__contains__(" "):
+                restart("Spaces are not allowed in the deck name. Please start over.")
+
             if lines[1].strip() == "Main Deck:":
                 print("Main Deck found.")
             else:
-                print("Main Deck not found! Please check  your formatting against example_decklist.txt. Please start over.")
-                decklist_checker(decklist)
+                restart("Main Deck not found! Please check  your formatting against example_decklist.txt. Please start over.")
     
             extra_index = 0
     
@@ -114,8 +117,8 @@ def decklist_checker(decklist):
                     print("Extra Deck found.")
                     return extra_index
             if extra_index == 0:
-                print("Extra Deck not found! Please check  your formatting against example_decklist.txt. Please start over.")
-                decklist_checker(decklist)
+                
+                restart("Extra Deck not found! Please check  your formatting against example_decklist.txt. Please start over.")
 
     pass
 
@@ -171,6 +174,10 @@ def gen_from_decklist(decklist):
 
     main_1 = []
     main_2 = []
+
+    if len(main_deck) != 80:
+        restart("Your deck has " + str(len(main_deck)) + " cards in it instead of 80!")
+
     for i in range(0, 39):
         #print(i)
         if len(main_deck) >= i:
@@ -323,11 +330,7 @@ def generate_sheet(list, dims, name):
             missing_cards.append(list[i])
 
     if missing_cards != []:
-        print("Error! These cards were unable to be found:")
-        print(missing_cards)
-        print("Please start over and try again.")
-        input("Input anything to quit. ")
-        quit()
+        restart("Error! These cards were unable to be found: " + missing_cards)
 
     # for i in list:
     #     card_array.append(generate_card(i))
@@ -353,7 +356,7 @@ def main():
     gen_from_decklist(decklistfile)
 
     print("Complete. Program finishing.")
-    input("Say Bye")
+    input("Say Bye. ")
 
 if __name__ == '__main__':
     main()
