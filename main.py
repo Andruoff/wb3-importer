@@ -330,7 +330,12 @@ def generate_sheet(list, dims, name):
             missing_cards.append(list[i])
 
     if missing_cards != []:
-        restart("Error! These cards were unable to be found: " + missing_cards)
+        missing_string = "["
+        for card in range(len(missing_cards)):
+            missing_string = (missing_string + missing_cards[card] + ", ")
+            pass
+        missing_string = missing_string + "]"
+        restart("Error! These cards were unable to be found: " + missing_string)
 
     # for i in list:
     #     card_array.append(generate_card(i))

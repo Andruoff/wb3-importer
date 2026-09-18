@@ -1,0 +1,41 @@
+White_Deck_2
+Main Deck:
+2 Find a Way
+2 Bloody Search
+3 Badass Name
+3 Bloodletter
+3 Conduit Cannon
+3 Prick
+3 Wreen Shock
+3 Selfmend
+1 Watchful Eye
+3 Emergency Stitches
+3 Lifewield
+3 Mid Lifegain
+2 Soul Explosion
+3 Overpower
+3 Mutual Assurance
+3 Exertion
+3 Reset
+3 Recoil Slam
+3 Second Wind 2
+2 Exile
+3 Mana Burn
+3 Axolotl Friend
+1 Lifeforce Protector
+1 Balmer
+3 Hungry Silkworm
+2 Reckless Protection
+3 Bloodlicker
+2 Greatheal
+3 Soulspark
+2 Refreshing Ward
+3 Scepter of Balance
+
+Extra Deck:
+3 Placating Chant
+3 Lethality Transfer
+3 Grand Aegis
+3 Paranoid Puppy
+3 Vein Rupture
+3 Overwhelming Blast
