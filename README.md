@@ -10,7 +10,7 @@ Operation:
 3. Update card database if you haven't within done so within the past few hours.
 3. It will generate 3 images, assuming you provided an Extra Deck
 
-A decklist formatting example is in example_decklist.txt,  and a short one is below
+A decklist formatting example is in example_decklist.txt,  and a short one is below (\\ in markdown are return characters, read the example_decklist.txt for a better example)
 
 Example_Deck_Name\
 Main Deck:\
@@ -20,5 +20,5 @@ Main Deck:\
 3 Bloodletter\
 \
 Extra Deck:\
-3 Ritual Fellow\
+3 Ritual Fellow
 
